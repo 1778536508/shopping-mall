@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "default";
+
+.clearfix{
+  zoom: 1;
+  &:after{
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+.back_images(@url, @w, @h) {
+  background: url(@url) no-repeat;
+  background-size: @w @h;
+}
+
+
+.max_min{
+  max-width: 1440px;
+  min-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 45px;
+}
+.pos(@p, @t, @r, @b, @l, @w, @h, @color, @z-i){
+  position: @p;
+  top: @t;
+  right: @r;
+  bottom: @b;
+  left: @l;
+  width: @w;
+  height: @h;
+  background: @color;
+  z-index: @z-i;
+}
+@textColor: #373737;
+@titleColor: #333333;
+

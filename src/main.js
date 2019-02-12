@@ -3,15 +3,87 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import 'lib-flexible/flexible.js'
 // 所有通过 createAPI 实现的通过 API 的形式调用的自定义组件（cube-ui 内置的组件）都需要通过 Vue.use 注册才可以。
-import { Dialog } from 'cube-ui'
-Vue.use(Dialog)
+import {
+  // 基础样式
+  Style,
+  // basic
+  Button,
+  Loading,
+  Tip,
+  Toolbar,
+  TabBar,
+  TabPanels,
+  // form
+  Checkbox,
+  CheckboxGroup,
+  Radio,
+  Checker,
+  Input,
+  Textarea,
+  Select,
+  Switch,
+  Rate,
+  Validator,
+  Upload,
+  Form,
+  // popup
+  Popup,
+  Toast,
+  Picker,
+  CascadePicker,
+  DatePicker,
+  TimePicker,
+  SegmentPicker,
+  Dialog,
+  ActionSheet,
+  Drawer,
+  // scroll
+  Scroll,
+  Slide,
+  IndexList,
+  Swipe,
+} from 'cube-ui'
+// basic
+Vue.use(Button);
+Vue.use(Loading);
+Vue.use(Tip);
+Vue.use(Toolbar);
+Vue.use(TabBar);
+Vue.use(TabPanels);
 
-import data from './assets/data.json'
+//form
+Vue.use(Checkbox);
+Vue.use(CheckboxGroup);
+Vue.use(Radio);
+Vue.use(Checker);
+Vue.use(Input);
+Vue.use(Textarea);
+Vue.use(Select);
+Vue.use(Switch);
+Vue.use(Rate);
+Vue.use(Validator);
+Vue.use(Upload);
+Vue.use(Form);
+//popup
+Vue.use(Popup);
+Vue.use(Toast);
+Vue.use(Picker);
+Vue.use(CascadePicker);
+Vue.use(DatePicker);
+Vue.use(TimePicker);
+Vue.use(SegmentPicker);
+Vue.use(Dialog);
+Vue.use(ActionSheet);
+Vue.use(Drawer);
+//scroll
+Vue.use(Scroll);
+Vue.use(Slide);
+Vue.use(IndexList);
+Vue.use(Swipe);
 
 Vue.config.productionTip = false
-Vue.prototype.json = data
 
 /* eslint-disable no-new */
 new Vue({

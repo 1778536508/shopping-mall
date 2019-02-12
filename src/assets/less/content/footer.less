@@ -1,0 +1,74 @@
+@charset "utd-8";
+@import "../base-method";
+
+.layout-footer {
+  .pos(fixed, auto, auto, 0, 0, 100%, auto, #fff, 1);
+  .footer-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+  }
+  .footer-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 2px;
+    font-size: 10px;
+    color: #999999;
+    line-height: 14px;
+    font-weight: 400;
+  }
+  .cube-tab {
+    &:nth-of-type(1) {
+      .footer-icon {
+        .back_images("../imgaes/home1-1.png", 100%, 100%);
+      }
+      &.cube-tab_active {
+        .footer-icon {
+          width: 20px;
+          height: 18px;
+          margin-top: 2px;
+          .back_images("../imgaes/home1.png", 100%, 100%);
+        }
+        .footer-text {
+          margin-top: 5px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .footer-icon {
+        .back_images("../imgaes/find1-1.png", 100%, 100%)
+      }
+      &.cube-tab_active {
+        .footer-icon {
+          .back_images("../imgaes/find1.png", 100%, 100%)
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .footer-icon {
+        .back_images("../imgaes/good-thing1-1.png", 100%, 100%)
+      }
+      &.cube-tab_active {
+        .footer-icon {
+          .back_images("../imgaes/good-thing1.png", 100%, 100%)
+        }
+      }
+    }
+    &:nth-of-type(4) {
+      .footer-icon {
+        .back_images("../imgaes/My1-1.png", 100%, 100%)
+      }
+      &.cube-tab_active {
+        .footer-icon {
+          .back_images("../imgaes/My1.png", 100%, 100%)
+        }
+      }
+    }
+    &.cube-tab_active {
+      .footer-text {
+        color: #030303;
+      }
+    }
+  }
+}
