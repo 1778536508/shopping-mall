@@ -1,26 +1,54 @@
 <template>
   <div class="home-upgrade">
-    <div class="home-upgrade-text">
-      <p>软件升级</p>
-      <i></i>
-    </div>
+    <list-title :title="content"></list-title>
     <div class="home-upgrade-banner">
+      <p class="home-upgrade-banner-title">{{title}}</p>
       <img :src="upurl" alt="">
     </div>
-    <up-banner></up-banner>
+    <up-banner :items="listData" :msgState="msgState"></up-banner>
 
   </div>
 </template>
 <script>
+  import ListTitle from './list-title'
   import UpBanner from './upbanner'
   export default {
-    name: '软件升级',
+    name: 'upgrade',
     components: {
+      ListTitle,
       UpBanner
     },
     data() {
       return {
-        upurl: '../../../static/imgaes/CombinedShape.png'
+        msgState: true,
+        upurl: '../../../static/imgaes/Mask.png',
+        title: '我是标题，此处可编辑',
+        content: {
+          name: '软件升级',
+          icon: '../../../static/imgaes/Softupg.png'
+        },
+        listData: [
+          {
+            url: 'javascript:;',
+            image: '../../../static/imgaes/GroupCopy.png'
+          },
+          {
+            url: 'javascript:;',
+            image: '../../../static/imgaes/GroupCopy.png'
+          },
+          {
+            url: 'javascript:;',
+            image: '../../../static/imgaes/GroupCopy.png'
+          },
+          {
+            url: 'javascript:;',
+            image: '../../../static/imgaes/GroupCopy.png'
+          },
+          {
+            url: 'javascript:;',
+            image: '../../../static/imgaes/GroupCopy.png'
+          }
+        ]
       }
     }
   }

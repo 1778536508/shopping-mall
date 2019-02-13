@@ -45,6 +45,6 @@
     }
   }
 </script>
-<style lang="less" scoped>
+<style lang="less">
     @import "../../assets/less/content/banner.less";
 </style>

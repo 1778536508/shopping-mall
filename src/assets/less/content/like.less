@@ -1,0 +1,23 @@
+@charset "utf-8";
+@import "../base-method";
+.icon-like {
+  display: inline-block;
+  min-width: 30px;
+  .clearfix;
+  span {
+    float: left;
+    height: 14px;
+    color: @white;
+    font-size: 10px;
+    &:nth-of-type(1) {
+      display: block;
+      width: 14px;
+      height: 12px;
+      margin-right: 2px;
+      .back_images("../imgaes/intention_white_heart.png", 100%, 100%);
+      &.active {
+        .back_images("../imgaes/redheart.png", 100%, 100%);
+      }
+    }
+  }
+}

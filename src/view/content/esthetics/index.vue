@@ -41,8 +41,13 @@
 
     },
     mounted() {
+      var _this = this;
+      setTimeout(function () {
+        _this.$refs.scroll.refresh();
+      },500)
 
-    }
+      // console.log(this.$refs.scroll.refresh)
+    },
   }
 </script>
 <style lang="less" scoped>

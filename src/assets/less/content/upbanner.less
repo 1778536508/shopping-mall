@@ -1,25 +1,86 @@
 @charset "utf-8";
 @import "../base-method";
 .home-upbanner {
+  margin-top: 10px;
   width: 100%;
+  height: 230px;
+  margin-bottom: 10px;
+  position: relative;
   .horizontal-scroll-list-wrap {
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    height: 230px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     .cube-scroll-content {
       display: inline-block;
     }
     .list-wrapper {
-      line-height: 60px;
       white-space: nowrap;
     }
     .list-item {
       display: inline-block;
       width: 138px;
       height: 219px;
+      margin-right: 10px;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 85px;
+        background: linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,.6));
+      }
+      &:last-child{
+        margin-right: 0px;
+      }
+      position: relative;
       img {
         width: 100%;
         height: 100%;
+      }
+      .upbanner-operation {
+        .pos(absolute, auto, auto, 5px, 0px, 100%, auto, none, 1 );
+        box-sizing: border-box;
+        padding-left: 8px;
+
+        .upbanner-operation-title {
+          width: 100%;
+          box-sizing: border-box;
+          margin-bottom: 5px;
+          p {
+            width: 130px;
+            color: @white;
+            font-size: 12px;
+            line-height: 17px;
+            display: block;
+            word-break: normal;
+            white-space: normal;
+            text-overflow: -o-ellipsis-lastline;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+    }
+  }
+  .life-loading {
+    width: 100%;
+    height: 230px;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    padding-top: 110px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    .cube-loading {
+      .cube-loading-spinners {
+        margin: 0 auto;
       }
     }
   }
