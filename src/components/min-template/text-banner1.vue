@@ -3,7 +3,7 @@
     <img :src="item.image" alt="">
     <div class="upbanner-operation">
       <div class="upbanner-operation-title">
-        <p>我是标题，，我若超出两行文字将显示省略号， 牛逼了</p>
+        <p>{{item.text}}</p>
       </div>
       <div>
         <up-like/>

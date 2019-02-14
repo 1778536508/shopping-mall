@@ -38,38 +38,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
-  .home-header {
-    width: 100%;
-    height: 39px;
-    .cube-tab-bar {
-      width: 100%;
-      height: 100%;
-
-      .cube-tab {
-        .header-text {
-          position: relative;
-          font-size: 16px;
-          &:after {
-            content: '';
-            width: 30%;
-            height: 2px;
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            margin-left: -15%;
-            border-radius: 1px;
-          }
-        }
-        &.cube-tab_active {
-          color: #A04E4E;
-          .header-text {
-            &:after {
-              background: #A04E4E;
-            }
-          }
-        }
-      }
-    }
-  }
-
+  @import "../../assets/less/content/home-header.less";
 </style>
