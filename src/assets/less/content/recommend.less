@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "../base-method";
+.recommend-list {
+  width: 100%;
+  background: @background_recommend;
+  .recommend-list-pics {
+    width: 100%;
+    .clearfix;
+    .recommend-list-pics-item {
+      float: left;
+      width: 50%;
+      height: 254px;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 8px 4px 0px 8px;
+      box-shadow: 1px 0px 10px rgba(0,0,0,.1);
+      &:nth-of-type(odd){
+        padding-right: 4px;
+      }
+      &:nth-of-type(even){
+        padding-left: 4px;
+      }
+    }
+  }
+}

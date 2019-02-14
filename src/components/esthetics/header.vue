@@ -26,6 +26,7 @@
     methods: {
       clickHandler (label) {
         console.log(label);
+        this.$emit("btnTable", label)
       },
     },
     mounted() {

@@ -1,7 +1,7 @@
 <template>
   <div class="esthetics-index">
     <!--头部-->
-    <home-header :ViewHeader="ViewData"/>
+    <home-header :ViewHeader="ViewData" @btnTable="btnTable"/>
     <div class="scroll-list-wrap">
       <cube-scroll
         ref="scroll">
@@ -38,23 +38,25 @@
       }
     },
     methods: {
-
+      btnTable() {
+        this.isRefresh();
+      },
+      isRefresh() {
+        var _this = this;
+        setTimeout(function () {
+          _this.$refs.scroll.refresh();
+          _this.$refs.scroll.scrollTo(0,0);
+        },100)
+      }
     },
     mounted() {
-      var _this = this;
-      setTimeout(function () {
-        _this.$refs.scroll.refresh();
-      },500)
+      this.isRefresh();
 
       // console.log(this.$refs.scroll.refresh)
     },
   }
 </script>
 <style lang="less" scoped>
-  p {
-    margin-top: 100px;
-    color: #fff;
-  }
   .esthetics-index {
     width: 100%;
     height: 100%;

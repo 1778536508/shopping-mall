@@ -9,16 +9,16 @@
       class="horizontal-scroll-list-wrap">
       <ul class="list-wrapper" v-if="items.length > 0">
         <li v-for="(item, index) in items" class="list-item">
-          <img :src="item.image" alt="">
-          <div class="upbanner-operation">
-            <div class="upbanner-operation-title">
-              <p>我是标题，，我若超出两行文字将显示省略号， 牛逼了</p>
-            </div>
-            <div>
-              <up-like/>
-              <up-see/>
-            </div>
 
+          <text-banner :item="item"></text-banner>
+          <!--更多-->
+          <div class="banner-more">
+            <div>
+              <p>
+                <span>更多</span>
+                <i></i>
+              </p>
+            </div>
           </div>
         </li>
       </ul>
@@ -29,8 +29,7 @@
   </div>
 </template>
 <script>
-  import UpLike from './like';
-  import UpSee from './see'
+  import TextBanner from './text-banner1'
   export default {
     name: 'banner',
     props: {
@@ -44,8 +43,7 @@
       }
     },
     components: {
-      UpLike,
-      UpSee
+      TextBanner
     },
     data() {
       return {
