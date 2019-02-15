@@ -19,7 +19,7 @@ export default new Router({
         {
           path: '/index',
           name: 'ContentEstheticsIndex',
-          component: () => import('@/view/content/esthetics/index.vue')
+          component: () => import('@/view/content/esthetics/index.vue'),
         },
         {
           path: '/index/find',

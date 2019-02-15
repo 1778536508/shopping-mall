@@ -1,8 +1,8 @@
 <template>
   <div class="mom-list">
-    <img :src="content.url" alt="">
-    <p class="mom-title1">{{content.title}}</p>
-    <span class="mom-title2">{{content.text}}</span>
+    <img v-if="content" :src="content.url" alt="">
+    <p v-if="content" class="mom-title1">{{content.title}}</p>
+    <span v-if="content" class="mom-title2">{{content.text}}</span>
     <div class="likeSee">
       <like></like>
       <see></see>

@@ -1,5 +1,5 @@
 <template>
-  <div class="home-upgrade-text">
+  <div class="home-upgrade-text" :class="{active: !title.state}">
     <p>{{title.name}}</p>
     <i><img :src="title.icon" alt=""></i>
   </div>
