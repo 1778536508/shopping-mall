@@ -21,7 +21,7 @@
   export default {
     name: 'text-banner2',
     props: {
-      items: ''
+      items: ""
     }
   }
 </script>

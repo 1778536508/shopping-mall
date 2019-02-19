@@ -31,7 +31,7 @@
         }, {
           label: '好物',
           icon: './../../../static/imgaes/good-thing1-1.png',
-          src: '/index/good'
+          src: '/index/good/home'
         }, {
           label: '我的',
           icon: './../../../static/imgaes/My1-1.png',

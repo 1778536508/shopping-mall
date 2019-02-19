@@ -29,12 +29,36 @@ export default new Router({
         {
           path: '/index/good',
           name: 'ContentGoodThingIndex',
-          component: () => import('@/view/content/goodthing/index.vue')
+          component: () => import('@/view/content/goodthing/index.vue'),
+          children: [
+            {
+              path: '/index/good/home',
+              name: 'ContentgoodthingreCommend',
+              component: () => import('@/components/goodthing/home/home.vue'),
+            },
+            {
+              path: '/index/good/list',
+              name: 'ContentgoodthingreList',
+              component: () => import('@/components/goodthing/list/list.vue'),
+            },
+            {
+              path: '/index/good/news',
+              name: 'ContentgoodthingreNews',
+              component: () => import('@/components/goodthing/news/news.vue'),
+            }
+          ]
         },
         {
           path: '/index/my',
           name: 'ContentMyIndex',
-          component: () => import('@/view/content/my/index.vue')
+          component: () => import('@/view/content/my/index.vue'),
+          children: [
+            {
+              path: '/index/my',
+              name: 'ContentMyIndexHome',
+              component: () => import('@/components/my/home/home.vue')
+            }
+          ]
         }
       ]
     },

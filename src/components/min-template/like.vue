@@ -15,7 +15,6 @@
     },
     methods: {
       btnActive(event) {
-        alert(this.isActive)
         console.log(event.target)
         this.isActive = !this.isActive;
 

@@ -66,7 +66,7 @@
               noMore: '数据加载完毕'
             }
           },
-          click: false
+          click: true
         },
         // 美在当下
         momentData: [
