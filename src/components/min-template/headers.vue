@@ -1,5 +1,5 @@
 <template>
-  <div class="text-search">
+  <div class="text-search" :class="{active: $route.query.type == 3}">
     <ul>
       <li onclick="javascript :history.back(-1);">
         <i></i>
@@ -27,15 +27,22 @@
           <p class="text-search-box-title">{{title}}</p>
         </div>
       </li>
-      <li v-if="title != '消息'">
+      <!--
+        @type
+          1 显示
+          2 不显示
+      -->
+      <li v-if="$route.query.type == 1">
         <router-link
           tag="span"
           :to="{
             path: '/index/good/news',
             query: {
-              name: '消息'
+              name: '消息',
+              type: 2
             }
           }">
+
             <b>12</b>
         </router-link>
       </li>
@@ -44,7 +51,7 @@
 </template>
 <script>
   export default {
-    name: 'search',
+    name: 'headers',
     watch: {
       $route: function (to, em) {
         this.title = to.query.name ? to.query.name : false
@@ -99,5 +106,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../assets/less/min-template/search.less";
+  @import "../../assets/less/min-template/header.less";
 </style>

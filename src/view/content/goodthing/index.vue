@@ -1,6 +1,7 @@
 <template>
   <div class="goodthing">
-    <search-index></search-index>
+    <header-index></header-index>
+
     <!--<good-thing></good-thing>-->
     <!--内容-->
     <router-view></router-view>
@@ -8,12 +9,15 @@
   </div>
 </template>
 <script>
-  import SearchIndex from '../../../components/min-template/search';
+  import HeaderIndex from '../../../components/min-template/headers';
 
   export default {
     name: 'goodthingIndex',
     components: {
-      SearchIndex,
+      HeaderIndex,
+    },
+    methods: {
+
     }
   }
 </script>

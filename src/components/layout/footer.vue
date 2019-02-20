@@ -4,7 +4,15 @@
       v-model="selectedLabelSlots"
       @click="clickHandler">
       <cube-tab v-for="(item, index) in tabs" :label="item.label" :key="item.label">
-        <router-link :to="item.src" tag="div">
+        <router-link
+          :to="{
+            path: item.src,
+            query: {
+              type: item.type,
+              label: item.label
+            }
+          }"
+          tag="div">
           <i class="footer-icon"></i>
           <p class="footer-text">{{item.label}}</p>
         </router-link>
@@ -19,23 +27,27 @@
     name: 'LayoutFooter',
     data () {
       return {
-        selectedLabelSlots: '美学',
+        selectedLabelSlots: this.$route.query.label ? this.$route.query.label : '美学',
         tabs: [{
           label: '美学',
           icon: './../../../static/imgaes/home1-1.png',
-          src: '/index'
+          src: '/index',
+          type: 2,
         }, {
           label: '发现',
           icon: './../../../static/imgaes/find1-1.png',
-          src: '/index/find'
+          src: '/index/find',
+          type: 2,
         }, {
           label: '好物',
           icon: './../../../static/imgaes/good-thing1-1.png',
-          src: '/index/good/home'
+          src: '/index/good/home',
+          type: 1,
         }, {
           label: '我的',
           icon: './../../../static/imgaes/My1-1.png',
-          src: '/index/my'
+          src: '/index/my',
+          type: 2,
         }]
       }
     },

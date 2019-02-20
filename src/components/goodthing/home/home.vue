@@ -27,7 +27,8 @@
                           path: '/index/good/list',
                           query: {
                             id: item.id,
-                            name: item.name
+                            name: item.name,
+                            type: 1
                           }
                         }"
                         tag="li"
