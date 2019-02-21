@@ -1,0 +1,127 @@
+@charset "utf-8";
+@import "../base-method";
+.address-scroll-list-wrap {
+  width: 100%;
+  position: fixed;
+  top: 44px;
+  bottom: 0;
+  background: @colorF8F8F8;
+  .cube-scroll-content {
+    width: 100%;
+  }
+  .cube-scroll-list-wrapper {
+    width: 100%;
+    padding-bottom: 120px;
+  }
+}
+.address-list {
+  width: 100%;
+  .address-list-pics {
+    width: 100%;
+    .address-list-item {
+      width: 100%;
+      .cube-radio {
+        width: 50%;
+        .border-bottom-1px:after {
+          border: none;
+        }
+        .cube-radio-ui:before {
+          color: #000;
+        }
+        &.cube-radio_selected {
+          .cube-radio-ui:before {
+            color: @white;
+          }
+        }
+      }
+      .address-list-title {
+        width: 100%;
+        padding: 10px 20px;
+        border-bottom: 1px solid @colorF8F8F8;
+        p {
+          width: 100%;
+          font-size: 18px;
+          color: @color444444;
+          line-height: 25px;
+        }
+        div {
+          width: 100%;
+          .clearfix;
+          margin-top: 3px;
+          span {
+            float: left;
+            font-size: 14px;
+            color: @color999999;
+            line-height: 16px;
+            margin-left: 10px;
+            &:nth-of-type(1) {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .address-list-address {
+        width: 100%;
+        border-bottom: 3px solid @colorF8F8F8;
+        position: relative;
+        .address-list-address-name {
+          float: left;
+          font-size: 14px;
+          color: @color999999;
+          line-height: 16px;
+        }
+        .add-icon {
+          display: block;
+          width: 21px;
+          height: 20px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 20px;
+          margin: auto;
+          .back_images('../imgaes/wirte_grey_square_pyer.png',100%, 100%);
+          &:nth-of-type(2) {
+            right: 66px;
+            .back_images('../imgaes/removespot.png',100%, 100%);
+          }
+        }
+      }
+
+    }
+  }
+  .address-create {
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 20px;
+    background: @white;
+    position: relative;
+    span {
+      flex-grow: 1;
+      font-size: 18px;
+      color: @color444444;
+    }
+    i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      margin: auto;
+      display: block;
+      width: 20px;
+      height: 20px;
+      .back_images('../imgaes/wirte_grey_square_yy.png', 100%, 100%)
+    }
+  }
+}
+.cube-dialog-main {
+  border-radius: 15px;
+  .cube-dialog-title-def {
+    color: @color333333;
+  }
+  .cube-dialog-btn {
+    color: #027AFF;
+  }
+}

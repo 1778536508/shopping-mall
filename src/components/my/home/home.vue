@@ -36,10 +36,21 @@
         <p class="my-order-title">我的订单</p>
         <div class="my-order-list">
           <ul>
-            <li v-for="(item, index) in orderList">
+            <router-link
+              v-for="(item, index) in orderList"
+              :to="{
+                path: '/index/my/order',
+                query: {
+                  name: '我的订单',
+                  code: item.code
+                }
+              }"
+              tag="li"
+              :key="index"
+            >
               <i></i>
               <p>{{item.name}}</p>
-            </li>
+            </router-link>
           </ul>
         </div>
       </div>
@@ -90,11 +101,21 @@
       </div>
       <div class="my-list">
         <ul>
-          <li v-for="(item, index) in contentList">
+          <router-link
+            v-for="(item, index) in contentList"
+            :to="{
+              path: item.path,
+              query: {
+                name: item.name,
+                type: 2
+              }
+            }"
+            tag="li"
+            :key="index">
             <i></i>
             <p>{{item.name}}</p>
             <b></b>
-          </li>
+          </router-link>
         </ul>
       </div>
     </div>
@@ -106,11 +127,11 @@
     data() {
       return {
         orderList: [
-          {name: '待付款'},
-          {name: '待收货'},
-          {name: '待评价'},
-          {name: '售后/退款'},
-          {name: '全部订单'},
+          {name: '待付款', code: 0},
+          {name: '待收货', code: 1},
+          {name: '待评价', code: 2},
+          {name: '售后/退款', code: 3},
+          {name: '全部订单', code: 4},
         ],
         releaseList: [
           {url: '../../../../static/imgaes/squareCopy.png'},
@@ -123,12 +144,12 @@
           {url: '../../../../static/imgaes/squareSopy.png'},
         ],
         contentList: [
-          {name: '我的活动'},
-          {name: '浏览历史'},
-          {name: '积分中心'},
-          {name: '优惠券'},
-          {name: '地址管理'},
-          {name: '客服咨询'},
+          {name: '我的活动', path: '/personal/activity'},
+          {name: '浏览历史', path: '/personal/history'},
+          {name: '积分中心', path: '/personal/integral'},
+          {name: '优惠券', path: '/personal/coupon'},
+          {name: '地址管理', path: '/personal/address'},
+          {name: '客服咨询', path: '/personal/service'},
         ]
       }
     }

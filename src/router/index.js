@@ -54,15 +54,23 @@ export default new Router({
             }
           ]
         },
+        // 我的
         {
           path: '/index/my',
           name: 'ContentMyIndex',
           component: () => import('@/view/content/my/index.vue'),
           children: [
+            // home首页
             {
               path: '/index/my',
               name: 'ContentMyIndexHome',
               component: () => import('@/components/my/home/home.vue')
+            },
+           // 我的订单
+            {
+              path: '/index/my/order',
+              name: 'ContentMyIndexOrder',
+              component: () => import('@/components/my/order/order.vue')
             }
           ]
         }
@@ -86,6 +94,48 @@ export default new Router({
           name: 'PersonalPictures',
           component: () => import('@/components/personal/pictures/pictures.vue')
         },
+        // 我的活动
+        {
+          path: '/personal/activity',
+          name: 'PersonalActivity',
+          component: () => import('@/components/personal/activity/activity.vue')
+        },
+        // 浏览历史
+        {
+          path: '/personal/history',
+          name: 'PersonalHistory',
+          component: () => import('@/components/personal/history/history.vue')
+        },
+        // 积分中心
+        {
+          path: '/personal/integral',
+          name: 'PersonalIntegral',
+          component: () => import('@/components/personal/integral/integral.vue')
+        },
+        // 优惠券
+        {
+          path: '/personal/coupon',
+          name: 'PersonalCoupon',
+          component: () => import('@/components/personal/coupon/coupon.vue')
+        },
+        // 地址管理
+        {
+          path: '/personal/address',
+          name: 'PersonalAddress',
+          component: () => import('@/components/personal/address/address.vue')
+        },
+        // 地址管理
+        {
+          path: '/personal/service',
+          name: 'PersonalService',
+          component: () => import('@/components/personal/service/service.vue')
+        },
+        // 添加地址
+        {
+          path: '/personal/createaddress',
+          name: 'PersonalCreateAddress',
+          component: () => import('@/components/personal/create-address/create-address.vue')
+        }
       ]
     },
     // 登录
