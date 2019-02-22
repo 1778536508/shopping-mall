@@ -33,6 +33,46 @@
   background: @color;
   z-index: @z-i;
 }
+
+/* 页签切换 动画过渡 */
+@keyframes animationshow {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@-webkit-keyframes animationshow {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes transit {
+  from {
+      bottom: -500px;
+      left: 0;
+  }
+  to {
+      bottom: 0;
+      left: 0;
+  }
+}
+@-webkit-keyframes transit {
+  from {
+      bottom: -500px;
+      left: 0;
+  }
+  to {
+      bottom: 0;
+      left: 0;
+  }
+}
+
 @textColor: #373737;
 @titleColor: #333333;
 @title2Color: #666666;
@@ -50,7 +90,20 @@
 @color999999: #999999;
 @colorD4D4D4: #D4D4D4;
 @color000000: #000000;
-@color030303: #030303;
 @colorEFEFEF: #EFEFEF;
 @color333333: #333333;
+@color999999: #999999;
+@colorE4E4E4: #E4E4E4;
+@color9B0000: #9B0000;
+@color6773B7: #6773B7;
+@color21376F: #21376F;
+@colorB75252: #B75252;
+@colorD45757: #D45757;
+
+
+// @detailsPromptColor: #FF4242;
+// @detailsShadowColor: #000000;
+// @detailsLinearStartColor: #6773B7;
+// @detailsLinearEndColor: #21376F;
+// @detailsBuyButtonColor: #D45757;
 

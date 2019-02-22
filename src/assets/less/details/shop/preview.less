@@ -1,0 +1,34 @@
+@charset "utd-8";
+@import "./../../base-method";
+
+.preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2;
+    .preview-page {
+        width: 375px;
+        height: 375px;
+        // margin-top: 130px;
+        top: 40%;
+        transform: translate(0, -40%);
+        .swiper-slide {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .swiper-pagination {
+        color: @white;
+        position: absolute;
+        top: 500px;
+        left: 0;
+    }
+}

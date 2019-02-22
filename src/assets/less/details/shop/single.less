@@ -1,0 +1,172 @@
+@charset "utd-8";
+@import "./../../base-method";
+
+.single-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    -webkit-animation: animationshow 0.3s;
+    animation: animationshow 0.3s;
+    .mask {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.75);
+    }
+    .operation {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        width: 375px;
+        height: 432px;
+        background-color: @white;
+        -webkit-animation: transit 0.3s;
+        animation: transit 0.3s;
+        .title {
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 18px;
+            h1 {
+                color: @color030303;
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+            p {
+                color: @color999999;
+                font-size: 14px;
+                width: 298px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                margin: 0 auto;
+            }
+        }
+        .form-box {
+            border-top: 1px solid @colorE4E4E4;
+            .form {
+                // border: 1px solid #030303;
+                // width: 209px;
+                // height: 62px;
+                margin: 10px 0px 10px 18px;
+                .clearfix();
+                h3 {
+                    font-size: 18px;
+                    color: @color030303
+                }
+
+                input {
+                    border: 1px solid @color999999;
+                    width: 160px;
+                    height: 30px;
+                    margin-right: 10px;
+                    padding-left: 13px;
+                    margin-top: 7px;
+                    float: left;
+                }
+            }
+        }
+        .num-box {
+            border-top: 1px solid @colorE4E4E4;
+            .num {
+                width: 194px;
+                height: 67px;
+                margin: 10px 0px 10px 18px;
+                h3 {
+                    font-size: 18px;
+                    color: #030303
+                }
+                .num-change {
+                    margin-top: 6px;
+                    .clearfix();
+                    button {
+                        width: 25px;
+                        height: 36px;
+                        border: 1px solid @color000000;
+                        background-color: @white;
+                        float: left;
+                        outline: none
+                    }
+                    input {
+                        width: 74px;
+                        height: 36px;
+                        border-top: 1px solid @color000000;
+                        border-bottom: 1px solid @color000000;
+                        text-align: center;
+                        font-size: 18px;
+                        float: left;
+                    }
+
+                    .company {
+                        font-size: 14px;
+                        color: #030303;
+                        margin-left: 9px;
+                        margin-top: 18px;
+                        display: inline-block;
+                        font-weight: 300
+                    }
+                }
+                
+            }
+           
+        }
+        .colour-box {
+            border-top: 1px solid @colorE4E4E4;
+            .colour {
+                margin: 10px 0px 10px 18px;
+                .clearfix();
+                h3 {
+                    font-size: 18px;
+                    color: @color030303
+                }
+                .option {
+                    margin-top: 8px;
+                    .clearfix();
+                    float: left;
+                    margin-right: 24px;
+                    input {
+                        float: left;
+                        width: 26px;
+                        height: 26px;
+                        margin-right: 5px;
+                    }
+
+                    p {
+                        float: left;
+                        font-size: 14px;
+                        color: @color030303;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+        .button-box {
+            border-top: 1px solid @colorE4E4E4;
+            .button-all {
+                margin-top: 23px;
+                text-align: center;
+                button {
+                    width: 158px;
+                    height: 30px;
+                    border: none;
+                    font-size: 18px;
+                    color: @white;
+                    font-weight: 100;
+                    outline: none;
+                    &:nth-of-type(1) {
+                      background: linear-gradient(left, @color6773B7, @color21376F);  
+                      margin-right: 20px;
+                    }
+
+                    &:nth-of-type(2) {
+                        background: @colorB75252;
+                    }
+                }
+            }
+        }
+    }
+}
+

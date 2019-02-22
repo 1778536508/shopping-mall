@@ -4,6 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import 'lib-flexible/flexible.js'
+import VueLazyload from 'vue-lazyload' // 图片懒加载
+var mydefault = require("@/assets/imgaes/default.png"); // 默认图片
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: mydefault,
+  loading: mydefault,
+  attempt: 1
+})
 // 所有通过 createAPI 实现的通过 API 的形式调用的自定义组件（cube-ui 内置的组件）都需要通过 Vue.use 注册才可以。
 import {
   // 基础样式
@@ -39,6 +47,7 @@ import {
   Dialog,
   ActionSheet,
   Drawer,
+  ImagePreview,
   // scroll
   Scroll,
   Slide,

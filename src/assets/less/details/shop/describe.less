@@ -1,0 +1,170 @@
+@charset "utd-8";
+@import "./../../base-method";
+
+.label (){
+    height: 18px;
+    border: 1px solid @color9B0000;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 12px;
+    color: @color9B0000;
+    display: inline-block
+}
+
+.num () {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.myIcon(@url, @width, @height) {
+    background: url(@url) no-repeat;
+    background-size: 100% 100%;
+    width: @width;
+    height: @height;
+    display: inline-block;
+}
+
+.span-set() {
+    .clearfix();
+    padding-right: 9px;
+    display: inline-block;
+    padding-top: 10px;
+    
+}
+
+.font-set(@color) {
+    float: left;
+    font-size: 14px;
+    color: @color;
+    margin-left: 4px;
+    margin-top: 2px;
+}
+
+.describe {
+    background-color:  @white;
+    .content {
+        padding: 16px 22px 14px 22px;
+        h1 {
+            font-size: 20px;
+            font-weight: bold
+        }
+        .info {
+            font-size: 14px;
+            margin-top: 7px;
+            line-height: 22px;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        .num {
+            margin-top: 16px;
+            .group {
+                width: 48px;
+                .label();
+            } 
+            .selected {
+                width: 41px;
+                margin-left: 2px;
+                .label();
+            } 
+
+            .price {
+                .num();
+                margin-left: 10px;
+                color: @color030303
+            } 
+
+            .nprice {
+                .num();
+                margin-left: 8px;
+                color: @color999999;
+            }
+            
+        }
+    }
+    .option {
+        .option-item {
+            border-top: 1px solid #F8F8F8;
+            padding: 22px;
+            display: flex;
+            .name {
+                color: @color999999;
+                font-size: 14px;
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                display: flex
+            }
+            .info {
+                color: @color030303;
+                font-size: 14px;
+                margin-left: 24px;
+                width: 239px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+            }
+            .add {
+                align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                display: flex;
+                i {
+                    .myIcon("./../../../imgaes/plus.png", 16px, 16px);
+                    margin-left: 18px;
+                    margin-top: -2px;
+                }
+            }
+            .service {
+                margin-left: 24px;
+                width: 239px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                // max-height: 52px;
+                .check {
+                    .span-set();
+                    i {
+                        .myIcon("./../../../imgaes/check.png", 16px, 16px);
+                        float: left;
+                    }
+                    p {
+                        .font-set(@color030303);
+                    }
+                }
+                .no-check {
+                    .span-set();
+                    i {
+                        .myIcon("./../../../imgaes/sigh.png", 16px, 16px);
+                        float: left;
+                    }
+                    p {
+                        .font-set(@title2Color)
+                    }
+                }
+            }
+            .address {
+                width: 239px;
+                margin-left: 24px;
+                display: flex;
+                p {
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                    color: @color030303;
+                    font-size: 14px;
+                    margin-left: 4px;
+                    margin-top: 2px;
+                }
+                i {
+                    .myIcon("./../../../imgaes/address.png", 14px, 15px);
+                }
+            }
+        }
+    }
+}

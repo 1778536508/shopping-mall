@@ -1,0 +1,45 @@
+@charset "utd-8";
+@import "./../../base-method";
+
+.myIcon(@url, @width, @height) {
+    background: url(@url) no-repeat;
+    background-size: 100% 100%;
+    width: @width;
+    height: @height;
+    display: inline-block;
+}
+
+.tab-after {
+    -webkit-animation: animationshow 0.5s;
+    animation: animationshow 0.5s;
+    .after-box {
+        border-top: 1px solid @colorF8F8F8;
+        border-bottom: 1px solid @colorF8F8F8;
+        padding: 16px 33px 16px 14px;
+        .after-title {
+            .clearfix();
+            padding-bottom: 4px;
+            i {
+                .myIcon("./../../../imgaes/check.png", 16px, 16px);
+                float: left;
+            }
+            p {
+                float: left;
+                color: @color333333;
+                font-size: 14px;
+                margin-left: 3px;
+                margin-top: 2px
+            }
+        }
+        .after-content {
+            line-height: 17px;
+            p {
+                font-size: 14px;
+                color: @color999999;
+                margin-left: 19px;
+                // padding-bottom: 12px;
+            }
+        }
+    }
+}
+

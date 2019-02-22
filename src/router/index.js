@@ -138,6 +138,20 @@ export default new Router({
         }
       ]
     },
+
+    // 详情
+    {
+      path: '/details',
+      name: 'DetailsIndex',
+      component: () => import('@/view/details/index.vue'),
+      children: [
+        {
+          path: '/shopDetails',
+          name: 'ShopDetails',
+          component: () => import('@/view/details/shop/details')
+        }
+      ]
+    },
     // 登录
     {
       path: '/login',

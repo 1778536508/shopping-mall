@@ -1,0 +1,109 @@
+@charset "utd-8";
+@import "./../../base-method";
+
+.icon(@url, @width, @height ) {
+    background: url(@url) no-repeat;
+    background-size: 100% auto;
+    width: @width;
+    height: @height;
+    display: block;
+}
+
+.slide {
+    background-color: @white;
+    .slide-top {
+        padding: 20px 22px 16px 22px;
+        position: relative;
+        .gallery-top {
+            box-shadow: 1px 2px 8px @color000000;
+            .swiper-slide {
+                width: 330px;
+                height: 330px;
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                
+            }
+            .heart {
+                width: 40px;
+                height: 40px;
+                background-color: @white;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1;
+                border-radius: 50px;
+                .icon-heart {
+                    .icon("./../../../imgaes/heart.png", 24px, 24px);
+                    position: absolute;
+                    margin: auto;
+                    top: 6px;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+        .icon-return {
+            .icon("./../../../imgaes/return.png", 32px, 32px);
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            z-index: 1;
+            
+        }
+        .icon-remind {
+            .icon("./../../../imgaes/remind.png", 32px, 32px);
+            position: absolute;
+            top: 10px;
+            right: 8px;
+            z-index: 1;
+            .num {
+                width: 18px;
+                height: 13px;
+                box-shadow: 0px 0px 3px @color000AFF;
+                border-radius: 10px;
+                background-color: @white;
+                text-align: center;
+                line-height: 12px;
+                position: absolute;
+                top: 4px;
+                left: 18px;
+                p {
+                    font-style: normal;
+                    font-size: 10px;
+                    color: @color000AFF;
+                    font-weight:bold;
+                    padding-top: 1px;
+                    margin-left: -1px;
+                }
+            }
+        }
+    }
+    .slide-list {
+        margin-left: 22px;
+        .gallery-thumbs {
+            .swiper-slide {
+                width: 50px;
+                height: 50px;
+                opacity: 0.4;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 1px 2px 8px @color000000; 
+                } 
+            }
+            .swiper-slide-thumb-active {
+                opacity: 1;
+            }
+        }
+        
+    }
+}
+
