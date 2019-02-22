@@ -70,10 +70,18 @@
         </p>
         <div class="my-release-list">
           <ul>
-            <li>
+            <router-link :to="{
+                            path: '/personal/dynamics',
+                            query: {
+                              name: '发布最新动态',
+                              type: 2
+                            }
+                          }"
+                         tag="li"
+            >
               <i><i></i></i>
               <p>发布最新动态</p>
-            </li>
+            </router-link>
             <li v-for="(item, index) in releaseList"><img :src="item.url" alt=""></li>
           </ul>
         </div>
@@ -127,11 +135,11 @@
     data() {
       return {
         orderList: [
-          {name: '待付款', code: 0},
-          {name: '待收货', code: 1},
-          {name: '待评价', code: 2},
-          {name: '售后/退款', code: 3},
-          {name: '全部订单', code: 4},
+          {name: '待付款', code: 1},
+          {name: '待收货', code: 2},
+          {name: '待评价', code: 3},
+          {name: '售后/退款', code: 4},
+          {name: '全部订单', code: 0},
         ],
         releaseList: [
           {url: '../../../../static/imgaes/squareCopy.png'},

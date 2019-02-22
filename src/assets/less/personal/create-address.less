@@ -14,39 +14,82 @@
       height: 48px;
       border-bottom: 1px solid rgba(151,151,151,.3);
       line-height: 48px;
-      display: flex;
+    //  display: flex;
       box-sizing: border-box;
       padding: 0 20px;
       .clearfix;
-      label {
-        display: block;
-        font-size: 14px;
-        color: @color333333;
-        width: 70px;
+      .cube-form-item {
+        padding: 0;
+        width: 100%;
+        height: 100%;
       }
+      .cube-form-item_required .cube-form-label:before {
+        display: none;
+      }
+      .cube-form-label {
+        width: 70px;
+        span {
+          display: block;
+          font-size: 14px;
+          color: @color333333;
+
+        }
+      }
+      .cube-validator-content {
+        width: 240px;
+      }
+
       input {
         flex-grow: 1;
         border: none;
         outline: none;
+        font-size: 14px;
+        color: @color333333;
       }
       a {
         display: block;
         flex-grow: 1;
-        text-align: right;
+        //text-align: right;
         font-size: 14px;
         color: @color999999;
-        text-decoration: underline;
+        .clearfix;
+        span:nth-of-type(1) {
+          float: left;
+        }
+        span:nth-of-type(2) {
+          float: right;
+          text-decoration: underline;
+        }
       }
       textarea {
         display: block;
         width: 100%;
         height: 165px;
+        font-size: 14px;
       }
       &:last-child {
         height: 181px;
         border: none;
         padding-top: 16px;
       }
+    }
+  }
+  .submitRelease {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 34px;
+    width: 246px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: auto;
+    background: linear-gradient(to right, #6773B7 , #21376F);
+    border-radius: 5px;
+    z-index: 2;
+    a {
+      font-size: 18px;
+      color: @white;
     }
   }
 }

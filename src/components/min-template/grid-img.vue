@@ -151,16 +151,18 @@
           }
         }, 1000)
       },
-    //  上传upload
+      // 上传upload
       addedHandler() {
         // const file = this.files[0]
         // file && this.$refs.upload.removeFile(file)
         // console.log(this.files);
 
       },
+      // 上传成功
       BtnSuccess(file) {
         console.log(file)
       },
+      // 上传失败
       errHandler(file) {
         console.log(file)
         this.releaseContent.unshift({url: file.url})

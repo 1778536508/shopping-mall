@@ -135,6 +135,18 @@ export default new Router({
           path: '/personal/createaddress',
           name: 'PersonalCreateAddress',
           component: () => import('@/components/personal/create-address/create-address.vue')
+        },
+        // 发布新动态
+        {
+          path: '/personal/dynamics',
+          name: 'PersonalDynamics',
+          component: () => import('@/components/personal/release-dynamics/release-dynamics.vue')
+        },
+        //标识单品
+        {
+          path: '/personal/singlelist',
+          name: 'PersonalSinglelist',
+          component: () => import('@/components/personal/single-list/single-list.vue')
         }
       ]
     },

@@ -142,6 +142,21 @@
           txt: '删除成功'
         }).show()
       }
+    },
+    mounted() {
+      var _this = this;
+      console.log(this.$route.query.valData)
+      if (this.$route.query.valData) {
+        this.addressData.options.unshift(
+          {
+            title: _this.$route.query.valData.addressValue + ',' + _this.$route.query.valData.detailedValue,
+            name: _this.$route.query.valData.collectValue,
+            ipone: _this.$route.query.valData.iphoneValue,
+            label: '设为默认收货地址',
+            value: _this.$route.query.valData.iphoneValue
+          }
+        )
+      }
     }
   }
 </script>
