@@ -1,17 +1,21 @@
 <template>
   <div class="main">
+    <tab :title="title"></tab>
   </div>
 </template>
 <script>
+import tab from './../../../components/details/order/top'
 export default {
   name: "details",
   data() {
     return {
-      pageObj: {}
+      title: "订单详情"
     }
   },
   created() {},
-  components: {}
+  components: {
+    tab,
+  }
 };
 </script>
 <style>

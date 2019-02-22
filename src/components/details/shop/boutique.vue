@@ -8,14 +8,10 @@
             <a href="javaScript:void(0)">
               <img v-lazy="item.image" alt>
             </a>
-            <div class="content">
-              <p class="name">{{item.name}}</p>
-              <p class="info">{{item.info}}</p>
-              <div class="price">
-                <span>¥ {{item.price}}</span> 
-                <span>¥ {{item.noPrice}}</span>
-              </div>
-            </div>
+            <p class="name">{{item.name}}</p>
+            <p class="info">{{item.info}}</p>
+            <span class="price">¥ {{item.price}}</span>
+            <span class="price">¥ {{item.noPrice}}</span>
           </div>
         </div>
       </div>

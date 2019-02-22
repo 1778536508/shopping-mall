@@ -152,6 +152,11 @@ export default new Router({
         }
       ]
     },
+    {
+      path: '/orderDetails',
+      name: 'OrderDetails',
+      component: () => import('@/view/details/order/details')
+    },
     // 登录
     {
       path: '/login',
