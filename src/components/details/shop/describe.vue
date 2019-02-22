@@ -3,20 +3,10 @@
     <div class="content">
       <h1>空气层美棉提花四件套</h1>
       <p class="info">Type产品详情基本叙述语段产品详情基本叙述语段Type产品详情基本叙述语段产品语段产品详情基本叙述语段</p>
-      <div class="num">
-        <div class="group">
-          <span>组合价</span>
-        </div>
-        <div class="selected">
-          <span>精选</span>
-        </div>
-        <div class="price">
-          <span>¥ 2340.00</span>
-        </div>
-        <div class="nprice">
-          <span>¥ 2340.00</span>
-        </div>
-      </div>
+      <span class="group">组合价</span>
+      <span class="selected">精选</span>
+      <span class="price">¥ 2340.00</span>
+      <span class="nprice">¥ 2340.00</span>
     </div>
     <div class="option">
       <div class="option-item">
@@ -103,7 +93,7 @@ export default {
   name: "silid",
   data() {
     return {
-      code: 0,
+      code: 0
     };
   },
   computed: {},
@@ -117,12 +107,12 @@ export default {
   mounted() {},
   methods: {
     showBox(index) {
-        console.log("index --- >", index)
-        this.code = index;
+      console.log("index --- >", index);
+      this.code = index;
     },
     initCode(code) {
-        console.log("code --- >", code);
-        this.code = code;
+      console.log("code --- >", code);
+      this.code = code;
     }
   }
 };

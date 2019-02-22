@@ -2,6 +2,7 @@
 @import "./../../base-method";
 
 .label (){
+    margin-top: 16px;
     height: 18px;
     border: 1px solid @color9B0000;
     line-height: 16px;
@@ -15,6 +16,7 @@
 .num () {
     display: inline-block;
     font-size: 14px;
+    margin-top: 16px;
 }
 
 .myIcon(@url, @width, @height) {
@@ -59,30 +61,27 @@
             -webkit-line-clamp: 2;
             overflow: hidden;
         }
-        .num {
-            margin-top: 16px;
-            .group {
-                width: 48px;
-                .label();
-            } 
-            .selected {
-                width: 41px;
-                margin-left: 2px;
-                .label();
-            } 
+        .group {
+            width: 48px;
+            .label();
+        }
 
-            .price {
-                .num();
-                margin-left: 10px;
-                color: @color030303
-            } 
+        .selected {
+            width: 41px;
+            margin-left: 2px;
+            .label();
+        }
 
-            .nprice {
-                .num();
-                margin-left: 8px;
-                color: @color999999;
-            }
-            
+        .price {
+            .num();
+            margin-left: 10px;
+            color: @color030303
+        } 
+
+        .nprice {
+            .num();
+            margin-left: 8px;
+            color: @color999999;
         }
     }
     .option {
