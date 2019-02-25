@@ -53,6 +53,7 @@ import {
   Slide,
   IndexList,
   Swipe,
+  ScrollNavBar,
 } from 'cube-ui'
 // basic
 Vue.use(Button);
@@ -91,6 +92,7 @@ Vue.use(Scroll);
 Vue.use(Slide);
 Vue.use(IndexList);
 Vue.use(Swipe);
+Vue.use(ScrollNavBar);
 
 Vue.config.productionTip = false
 

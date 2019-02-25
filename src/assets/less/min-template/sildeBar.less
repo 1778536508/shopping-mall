@@ -1,44 +1,88 @@
 @charset "utf-8";
 @import "../base-method";
-.silde-scroll-list-wrap {
+.side-container {
   width: 100%;
   position: absolute;
   top: 5px;
   bottom: 5px;
   margin: auto;
-  .sildeBar-pics {
+  .cube-scroll-wrapper {
     width: 100%;
-    border-right: 1px solid @colorF8F8F8;
-    box-sizing: border-box;
-    .sildeBar-pics-item {
-      width: 100%;
-      height: 50px;
+  }
+  .cube-scroll-nav-bar-item {
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    span {
+      font-size: 14px;
+      color: @color999999;
+      font-weight: 400;
+    }
+    &.cube-scroll-nav-bar-item_active {
       position: relative;
-      a {
+      &:after {
+        transition: all .5s;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -13px;
+        content: "";
         display: block;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        line-height: 50px;
-        font-size: 14px;
-        color: @titleColor;
+        width: 3px;
+        height: 26px;
+        background: @titleColor;
+        border: 1px solid @color979797;
+        box-sizing: border-box;
       }
-      &.active {
-        &:after {
-          position: absolute;
-          left: 0;
-          top: 50%;
-          margin-top: -13px;
-          content: "";
-          display: block;
-          width: 3px;
-          height: 26px;
-          background: @titleColor;
-          border: 1px solid @color979797;
-          box-sizing: border-box;
-        }
+      span {
+        color: @titleColor;
+        transition: all .5s;
       }
     }
   }
+  //.sildeBar-pics {
+  //  width: 100%;
+  //  border-right: 1px solid @colorF8F8F8;
+  //  box-sizing: border-box;
+  //  .sildeBar-pics-item {
+  //    width: 100%;
+  //    height: 50px;
+  //    position: relative;
+  //    transition: all .5s;
+  //    a {
+  //      display: block;
+  //      width: 100%;
+  //      height: 100%;
+  //      text-align: center;
+  //      line-height: 50px;
+  //      font-size: 14px;
+  //      //color: @titleColor;
+  //      color: @color999999;
+  //    }
+  //    &.active {
+  //      transition: all .5s;
+  //      a {
+  //        color: @titleColor;
+  //        transition: all .5s;
+  //      }
+  //      &:after {
+  //        transition: all .5s;
+  //        position: absolute;
+  //        left: 0;
+  //        top: 50%;
+  //        margin-top: -13px;
+  //        content: "";
+  //        display: block;
+  //        width: 3px;
+  //        height: 26px;
+  //        background: @titleColor;
+  //        border: 1px solid @color979797;
+  //        box-sizing: border-box;
+  //      }
+  //    }
+  //  }
+  //}
 }
 

@@ -120,9 +120,9 @@
             text: this.value
           })
           this.value = '';
-          setTimeout(function () {
+          // setTimeout(function () {
             window.scrollTo(0, document.getElementById('news-scroll-list-wrap').scrollHeight);
-          }, 500)
+          // }, 500)
         } else {
 
         }
