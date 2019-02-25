@@ -43,7 +43,7 @@
         <router-link
           tag="span"
           :to="{
-            path: '/index/good/news',
+            path: '/personal/service',
             query: {
               title: '消息'
             }

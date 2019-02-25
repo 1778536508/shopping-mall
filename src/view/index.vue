@@ -24,4 +24,7 @@
     opacity: 0;
     background: #fff;
   }
+  .cube-dialog-main {
+    border-radius: 20px;
+  }
 </style>

@@ -37,9 +37,9 @@
         </cube-form-item>
         <cube-form-item :field="fields[2]">
           <i class="release-dynamics-icon"></i>
-          <textarea name="" id="" cols="30" rows="10" placeholder="我想说..." class="release-dynamics-input"></textarea>
+          <textarea name="" id="" cols="30" rows="10" placeholder="我想说..." class="release-dynamics-input" v-model="FormValue.textVal"></textarea>
         </cube-form-item>
-        <cube-form-item :field="fields[2]">
+        <cube-form-item>
           <div class="single-product-btn">
             <router-link
               tag="p"
@@ -165,14 +165,35 @@
       },
       // 提交成功
       submitSuccess() {
-
+        var _this = this;
+        _this.$createToast({
+          type: 'correct',
+          txt: '发布成功',
+        }).show()
+        setTimeout(function () {
+          _this.$router.go(-1)
+        },500)
       },
       // 提交失败
       submitError() {
-
+        // var _this = this;
+        // _this.$createToast({
+        //   type: 'correct',
+        //   txt: '发布失败',
+        // }).show()
       },
       // 提交发布
       submitRelease() {
+        var _this = this;
+        this.$refs.forms.submit();
+        if (this.FormValue.uploadVal.length == 0) {
+          this.$createDialog({
+            type: 'alert',
+            title: '温馨提示！',
+            content: '请最少添加一张图片喔',
+            icon: 'cubeic-alert'
+          }).show()
+        }
 
       },
     },

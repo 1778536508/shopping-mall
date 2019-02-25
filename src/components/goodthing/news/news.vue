@@ -37,77 +37,77 @@
 <script>
   import HeaderIndex from '../../min-template/headers';
   export default {
-      name: "news",
+    name: "news",
     components: {
       HeaderIndex
     },
-      data() {
-        return {
-          value: '',
-          newsData: [
-            {
-              type: 1,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
-            },
-            {
-              type: 2,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是XXXXXXXXX'
-            },
-            {
-              type: 1,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
-            },
-            {
-              type: 1,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
-            },
-            {
-              type: 2,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是XXXXXXXXX'
-            },
-            {
-              type: 2,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是XXXXXXXXX'
-            },
-            {
-              type: 1,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
-            },
-            {
-              type: 2,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是XXXXXXXXX'
-            },
-            {
-              type: 1,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
-            },
-            {
-              type: 1,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
-            },
-            {
-              type: 2,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是XXXXXXXXX'
-            },
-            {
-              type: 2,
-              head_icon: '../../../static/imgaes/head_icon.png',
-              text: '您好，我是XXXXXXXXX111111111111'
-            }
-          ]
-        }
-      },
+    data() {
+      return {
+        value: '',
+        newsData: [
+          {
+            type: 1,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
+          },
+          {
+            type: 2,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是XXXXXXXXX'
+          },
+          {
+            type: 1,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
+          },
+          {
+            type: 1,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
+          },
+          {
+            type: 2,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是XXXXXXXXX'
+          },
+          {
+            type: 2,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是XXXXXXXXX'
+          },
+          {
+            type: 1,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
+          },
+          {
+            type: 2,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是XXXXXXXXX'
+          },
+          {
+            type: 1,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
+          },
+          {
+            type: 1,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是美学共和的小M，请问有什么可以帮助到您？'
+          },
+          {
+            type: 2,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是XXXXXXXXX'
+          },
+          {
+            type: 2,
+            head_icon: '../../../static/imgaes/head_icon.png',
+            text: '您好，我是XXXXXXXXX111111111111'
+          }
+        ]
+      }
+    },
     methods: {
       BtnSendOut() {
         // console.log(this.options.startY);
