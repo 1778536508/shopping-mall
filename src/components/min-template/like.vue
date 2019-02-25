@@ -30,5 +30,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../assets/less/content/like";
+  @import "../../assets/less/min-template/like";
 </style>

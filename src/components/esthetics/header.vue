@@ -38,5 +38,5 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
-  @import "../../assets/less/content/home-header.less";
+  @import "../../assets/less/esthetics/header.less";
 </style>

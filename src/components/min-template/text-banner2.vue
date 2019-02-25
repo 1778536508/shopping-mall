@@ -26,5 +26,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../assets/less/content/text-banner2.less";
+  @import "../../assets/less/min-template/text-banner2.less";
 </style>

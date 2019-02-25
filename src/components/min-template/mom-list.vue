@@ -24,5 +24,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../assets/less/content/mom-list.less";
+  @import "../../assets/less/min-template/mom-list.less";
 </style>

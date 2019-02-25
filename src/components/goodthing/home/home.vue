@@ -1,5 +1,13 @@
 <template>
   <div>
+    <!-- header -->
+    <header-index
+      :params="{
+        back: false,
+        searchs: true,
+        title: false,
+        news: true
+      }"></header-index>
     <div class="goodthing-index">
       <ul class="goodthing-pics">
         <li class="goodthing-item">
@@ -22,17 +30,14 @@
                   </div>
                   <div class="special-area-imgText">
                     <ul>
-                      <router-link
-                        :to="{
-                          path: '/index/good/list',
-                          query: {
-                            id: item.id,
-                            name: item.name,
-                            type: 1
-                          }
-                        }"
-                        tag="li"
-                        v-for="(item, index) in itemsData1" :key="index" @click="btnHref(item.id)">
+                      <router-link :to="{
+                        path: '/index/good/list',
+                        query: {
+                          title: item.name
+                        }
+                      }"
+                       tag="li"
+                        v-for="(item, index) in itemsData1" :key="index">
                         <special-area :items="item"></special-area>
                       </router-link>
                     </ul>
@@ -74,6 +79,7 @@
   </div>
 </template>
 <script>
+  import HeaderIndex from '../../min-template/headers';
   import SildeBar from '../../min-template/sildeBar';
   import Banner from '../../min-template/banner';
   import SpecialArea from '../../min-template/special-area';
@@ -81,6 +87,7 @@
   export default {
     name: 'goodthing',
     components: {
+      HeaderIndex,
       SildeBar,
       Banner,
       SpecialArea,
@@ -234,13 +241,11 @@
       }
     },
     methods: {
-      btnHref(id) {
-        window.location.href = "#/index/good/list?id=" + id;
-      }
+
     }
 
   }
 </script>
 <style lang="less">
-  @import "../../../assets/less/goodthing/content.less";
+  @import "../../../assets/less/goodthing/home/home.less";
 </style>

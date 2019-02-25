@@ -1,7 +1,16 @@
 <template>
-  <div class="address-scroll-list-wrap">
-    <cube-scroll
-      ref="scroll">
+  <div>
+    <HeaderIndex
+      :params="{
+              back: false,
+              searchs: false,
+              title: $route.query.title,
+              news: false
+          }"
+    ></HeaderIndex>
+    <div class="address-scroll-list-wrap">
+      <cube-scroll
+        ref="scroll">
         <div class="address-list">
           <ul class="address-list-pics">
             <cube-radio-group>
@@ -30,8 +39,7 @@
             :to="{
               path: '/personal/createaddress',
               query: {
-                name: '添加地址',
-                type: 2
+                title: '添加地址'
               }
             }"
             tag="div"
@@ -40,12 +48,18 @@
             <i></i>
           </router-link>
         </div>
-    </cube-scroll>
+      </cube-scroll>
+    </div>
   </div>
+
 </template>
 <script>
+  import HeaderIndex from '../../min-template/headers';
   export default {
     name: "addresss",
+    components: {
+      HeaderIndex
+    },
     data() {
       return {
         addressData: {
@@ -162,5 +176,5 @@
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/personal/address.less";
+  @import "../../../assets/less/personal/address/address.less";
 </style>

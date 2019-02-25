@@ -38,5 +38,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../assets/less/content/homelist.less";
+  @import "../../assets/less/min-template/homelist.less";
 </style>

@@ -1,5 +1,12 @@
 <template>
     <div>
+      <header-index
+        :params="{
+        back: false,
+        searchs: false,
+        title: $route.query.title,
+        news: true
+      }"></header-index>
       <div class="list-scroll-list-wrap">
         <cube-scroll
           ref="scroll"
@@ -16,15 +23,19 @@
 </template>
 
 <script>
+  import HeaderIndex from '../../min-template/headers';
   import TextBanner2 from '../../min-template/text-banner2';
     export default {
-        name: "list",
+      name: "list",
+      beforeCreate() {
+        // 动态改变路由meta值
+      },
       components: {
-        TextBanner2
+        HeaderIndex,
+        TextBanner2,
       },
       data() {
           return {
-            params: window.location.href.split('?id=')[1].split('&name=')[0],
             listData: [
               {
                 type: 2,
@@ -94,12 +105,11 @@
           }
       },
       mounted() {
-          // 此处交互   params 当前分类的参数
-          console.log('参数params:' + this.params);
+
       }
     }
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/goodthing/list.less";
+  @import "../../../assets/less/goodthing/list/list.less";
 </style>

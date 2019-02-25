@@ -1,45 +1,56 @@
 <template>
-  <div class="create-address-box">
-    <cube-form ref="forms" :model="forms" @validate="validateHandler" @submit="submitHandler" @invalid="invalid" @valid="valid">
-      <cube-form-group>
-      <ul>
-        <li>
-          <cube-form-item :field="fields[0]">
-            <!--<label for="">收件人</label>-->
-            <input type="text" placeholder="填写姓名" v-model="forms.collectValue">
-          </cube-form-item>
+  <div>
+    <HeaderIndex
+      :params="{
+              back: false,
+              searchs: false,
+              title: $route.query.title,
+              news: false
+          }"
+    ></HeaderIndex>
+    <div class="create-address-box">
+      <cube-form ref="forms" :model="forms" @validate="validateHandler" @submit="submitHandler" @invalid="invalid" @valid="valid">
+        <cube-form-group>
+          <ul>
+            <li>
+              <cube-form-item :field="fields[0]">
+                <!--<label for="">收件人</label>-->
+                <input type="text" placeholder="填写姓名" v-model="forms.collectValue">
+              </cube-form-item>
 
-        </li>
-        <li>
-          <cube-form-item :field="fields[1]">
-            <!--<label for="">联系电话</label>-->
-            <input type="text" placeholder="填写手机号" v-model="forms.iphoneValue">
-          </cube-form-item>
+            </li>
+            <li>
+              <cube-form-item :field="fields[1]">
+                <!--<label for="">联系电话</label>-->
+                <input type="text" placeholder="填写手机号" v-model="forms.iphoneValue">
+              </cube-form-item>
 
-        </li>
-        <li>
-          <cube-form-item :field="fields[2]">
-            <!--<label for="">所在区域</label>-->
-            <!--<span></span>-->
-            <a href="javascript:;" @click="BrnAssdress">
-              <span>{{forms.addressValue}}</span>
-              <span>选择地理位置</span>
-            </a>
-          </cube-form-item>
+            </li>
+            <li>
+              <cube-form-item :field="fields[2]">
+                <!--<label for="">所在区域</label>-->
+                <!--<span></span>-->
+                <a href="javascript:;" @click="BrnAssdress">
+                  <span>{{forms.addressValue}}</span>
+                  <span>选择地理位置</span>
+                </a>
+              </cube-form-item>
 
-        </li>
-        <li>
-          <cube-form-item :field="fields[3]">
-            <textarea name="" id="" placeholder="填写详细地址" v-model="forms.detailedValue"></textarea>
-          </cube-form-item>
-        </li>
-      </ul>
-      <div class="submitRelease">
-        <a href="javascript:;" @click="showToastMask">保存</a>
-      </div>
-      </cube-form-group>
-    </cube-form>
+            </li>
+            <li>
+              <cube-form-item :field="fields[3]">
+                <textarea name="" id="" placeholder="填写详细地址" v-model="forms.detailedValue"></textarea>
+              </cube-form-item>
+            </li>
+          </ul>
+          <div class="submitRelease">
+            <a href="javascript:;" @click="showToastMask">保存</a>
+          </div>
+        </cube-form-group>
+      </cube-form>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -64,8 +75,12 @@
   })
   console.log('dataJson',dataJson);
 
+  import HeaderIndex from '../../min-template/headers';
   export default {
     name: "create-address",
+    components: {
+      HeaderIndex
+    },
     data() {
       return {
         cascadeData: dataJson,
@@ -215,14 +230,7 @@
             txt: '保存成功',
           }).show()
           setTimeout(function () {
-            _this.$router.push({
-              path: `/personal/address`,
-              query: {
-                name: '地址管理',
-                type: 2,
-                valData: _this.forms
-              }
-            })
+            _this.$router.go(-1)
           },500)
 
         },1000)
@@ -241,5 +249,5 @@
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/personal/create-address.less";
+  @import "../../../assets/less/personal/create-address/create-address.less";
 </style>

@@ -377,5 +377,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../../assets/less/content/home.less";
+  @import "../../../assets/less/esthetics/home/home.less";
 </style>

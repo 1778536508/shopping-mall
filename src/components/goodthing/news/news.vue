@@ -1,5 +1,12 @@
 <template>
     <div>
+      <header-index
+        :params="{
+        back: false,
+        searchs: false,
+        title: $route.query.title,
+        news: false
+      }"></header-index>
       <div class="news-scroll-list-wrap" id="news-scroll-list-wrap">
         <ul class="news-chat-pics" ref="scrollPics">
           <li v-for="(item, index) in newsData" :key="index" class="news-chat-pics-item" :class="{active: item.type == 2}">
@@ -28,8 +35,12 @@
 </template>
 
 <script>
+  import HeaderIndex from '../../min-template/headers';
   export default {
       name: "news",
+    components: {
+      HeaderIndex
+    },
       data() {
         return {
           value: '',
@@ -128,5 +139,5 @@
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/goodthing/news.less";
+  @import "../../../assets/less/goodthing/news/news.less";
 </style>

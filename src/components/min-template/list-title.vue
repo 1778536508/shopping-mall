@@ -13,5 +13,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../assets/less/content/list-title.less";
+  @import "../../assets/less/min-template/list-title.less";
 </style>

@@ -1,6 +1,13 @@
 <template>
   <div class="release-dynamics">
-
+    <HeaderIndex
+      :params="{
+              back: false,
+              searchs: false,
+              title: $route.query.title,
+              news: false
+          }"
+    ></HeaderIndex>
     <!--uploadImg.png-->
     <cube-form ref="forms" :model="FormValue" @invalid="submitError" @valid="submitSuccess">
       <cube-form-group>
@@ -66,10 +73,12 @@
 </template>
 
 <script>
-  import SingleProduct from '../../min-template/single'
+  import SingleProduct from '../../min-template/single';
+  import HeaderIndex from '../../min-template/headers';
   export default {
     name: "release-dynamics",
     components: {
+      HeaderIndex,
       SingleProduct
     },
     data() {
@@ -166,10 +175,13 @@
       submitRelease() {
 
       },
+    },
+    mounted() {
+      window.scrollTo(0, 0);
     }
   }
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/personal/release-dynamics.less";
+  @import "../../../assets/less/personal/release-dynamics/release-dynamics.less";
 </style>

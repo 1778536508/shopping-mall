@@ -1,7 +1,14 @@
 <template>
     <div>
       <div>
-        <HeaderIndex></HeaderIndex>
+        <HeaderIndex
+          :params="{
+              back: false,
+              searchs: false,
+              title: $route.query.title,
+              news: false
+          }"
+        ></HeaderIndex>
       </div>
       <div class="order-table">
         <ul>
@@ -71,5 +78,5 @@
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/personal/order.less";
+  @import "../../../assets/less/my/order/order.less";
 </style>

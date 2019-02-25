@@ -5,8 +5,7 @@
           :to="{
             path: '/personal',
             query: {
-              name: '个人中心',
-              type: 2
+              title: '个人中心'
             }
           }
           "
@@ -41,7 +40,7 @@
               :to="{
                 path: '/index/my/order',
                 query: {
-                  name: '我的订单',
+                  title: '我的订单',
                   code: item.code
                 }
               }"
@@ -61,7 +60,6 @@
             :to="{
               path: '/personal/pictures',
               query: {
-                type: 3,
                 code: 0
               }
             }"
@@ -73,8 +71,7 @@
             <router-link :to="{
                             path: '/personal/dynamics',
                             query: {
-                              name: '发布最新动态',
-                              type: 2
+                              title: '发布最新动态'
                             }
                           }"
                          tag="li"
@@ -93,7 +90,6 @@
             :to="{
               path: '/personal/pictures',
               query: {
-                type: 3,
                 code: 1
               }
             }"
@@ -114,8 +110,7 @@
             :to="{
               path: item.path,
               query: {
-                name: item.name,
-                type: 2
+                title: item.name,
               }
             }"
             tag="li"
@@ -165,5 +160,5 @@
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/my/home.less";
+  @import "../../../assets/less/my/home/home.less";
 </style>

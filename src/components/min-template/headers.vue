@@ -1,11 +1,17 @@
 <template>
-  <div class="text-search" :class="{active: $route.query.type == 3}">
+  <div class="text-search" :class="{active: params.back}">
     <ul>
+      <!--
+        返回上一级
+      -->
       <li onclick="javascript :history.back(-1);">
         <i></i>
       </li>
       <li>
-        <div v-if="!title">
+        <!--
+          输入框
+        -->
+        <div v-show="params.searchs">
           <cube-input v-model="value" placeholder="搜索" @focus="inputFocus" @blur="inputBlur" class="text-search-input"></cube-input>
           <i></i>
           <div class="search-box" v-show="boxState">
@@ -23,23 +29,23 @@
             </div>
           </div>
         </div>
-        <div v-if="title" class="text-search-box">
-          <p class="text-search-box-title">{{title}}</p>
+        <!--
+          标题title
+        -->
+        <div v-show="params.title" class="text-search-box">
+          <p class="text-search-box-title">{{params.title}}</p>
         </div>
       </li>
       <!--
-        @type
-          1 显示
-          2 不显示
+      消息
       -->
-      <li v-if="$route.query.type == 1">
+      <li v-show="params.news">
         <router-link
           tag="span"
           :to="{
             path: '/index/good/news',
             query: {
-              name: '消息',
-              type: 2
+              title: '消息'
             }
           }">
 
@@ -47,11 +53,23 @@
         </router-link>
       </li>
     </ul>
+    <!--<p style="color: red;">{{params}}</p>-->
   </div>
 </template>
 <script>
   export default {
     name: 'headers',
+    /**
+     * @params: {
+       *  back: true,    无背景色
+       *  searchs: true,  输入框显示
+       *  title: true,   标题显示
+       *  news: true     消息图标显示
+       * }
+     */
+    props: {
+      params: ''
+    },
     watch: {
       $route: function (to, em) {
         this.title = to.query.name ? to.query.name : false
@@ -101,7 +119,8 @@
       }
     },
     mounted() {
-      this.title = this.$route.query.name ? this.$route.query.name : false
+      this.title = this.$route.query.name ? this.$route.query.name : false;
+      console.log(this.$route.meta)
     }
   }
 </script>

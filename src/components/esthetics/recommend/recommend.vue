@@ -107,5 +107,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../../assets/less/content/recommend.less";
+  @import "../../../assets/less/esthetics/recommend/recommend.less";
 </style>

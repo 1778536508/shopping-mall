@@ -28,5 +28,5 @@
   }
 </script>
 <style lang="less">
-  @import "../../assets/less/content/see";
+  @import "../../assets/less/min-template/see";
 </style>

@@ -1,4 +1,13 @@
 <template>
+  <div>
+    <HeaderIndex
+      :params="{
+              back: true,
+              searchs: false,
+              title: false,
+              news: false
+          }"
+    ></HeaderIndex>
     <div class="pictures-box-box">
       <div class="pictures-head-box">
         <img src="../../../../static/imgaes/banner.png" alt="" class="pictures-background-img">
@@ -36,13 +45,17 @@
       </div>
 
     </div>
+  </div>
+
 </template>
 
 <script>
-  import GridImg from '../../min-template/grid-img'
+  import HeaderIndex from '../../min-template/headers';
+  import GridImg from '../../min-template/grid-img';
   export default {
     name: "pictures",
     components: {
+      HeaderIndex,
       GridImg
     },
     data() {
@@ -68,5 +81,5 @@
 </script>
 
 <style lang="less">
-  @import "../../../assets/less/personal/pictures.less";
+  @import "../../../assets/less/personal/pictures/pictures.less";
 </style>

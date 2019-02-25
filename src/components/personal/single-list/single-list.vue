@@ -1,18 +1,31 @@
 <template>
+  <div>
+    <HeaderIndex
+      :params="{
+              back: false,
+              searchs: true,
+              title: false,
+              news: false
+          }"
+    ></HeaderIndex>
     <div class="single-list-search">
-        <ul>
-          <li v-for="(item, index) in singleData">
-            <SingleProduct :singleData="item"></SingleProduct>
-          </li>
-        </ul>
+      <ul>
+        <li v-for="(item, index) in singleData">
+          <SingleProduct :singleData="item"></SingleProduct>
+        </li>
+      </ul>
     </div>
+  </div>
+
 </template>
 
 <script>
-  import SingleProduct from '../../min-template/single'
+  import HeaderIndex from '../../min-template/headers';
+  import SingleProduct from '../../min-template/single';
     export default {
         name: "single-list",
       components: {
+        HeaderIndex,
         SingleProduct
       },
       data() {

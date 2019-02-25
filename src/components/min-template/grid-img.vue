@@ -8,23 +8,28 @@
       @pulling-up="onPullingUp">
         <div class="grid-list">
             <ul>
-              <cube-upload
-                v-if="isType == 1"
-                ref="upload"
-                v-model="uterUpload.files"
-                :action="uterUpload.action"
-                @files-added="addedHandler"
-                @file-success="BtnSuccess"
-                @file-error="errHandler">
-                <div class="clear-fix">
-                  <cube-upload-btn :multiple="false">
-                    <div class="grid-upload">
+              <!--<cube-upload-->
+                <!--v-if="isType == 1"-->
+                <!--ref="upload"-->
+                <!--v-model="uterUpload.files"-->
+                <!--:action="uterUpload.action"-->
+                <!--@files-added="addedHandler"-->
+                <!--@file-success="BtnSuccess"-->
+                <!--@file-error="errHandler">-->
+                <!--<div class="clear-fix">-->
+                  <!--<cube-upload-btn :multiple="false">-->
+                    <router-link :to="{
+                      path: '/personal/dynamics',
+                      query: {
+                        title: '发布最新动态'
+                      }
+                    }" class="grid-upload">
                       <i><i></i></i>
                       <p>发布最新动态</p>
-                    </div>
-                  </cube-upload-btn>
-                </div>
-              </cube-upload>
+                    </router-link>
+                  <!--</cube-upload-btn>-->
+                <!--</div>-->
+              <!--</cube-upload>-->
 
               <li v-for="(item, index) in isType == 1 ? releaseContent : LikeContent" :key="index"><img :src="item.url" alt=""></li>
             </ul>
@@ -152,27 +157,27 @@
         }, 1000)
       },
       // 上传upload
-      addedHandler() {
-        // const file = this.files[0]
-        // file && this.$refs.upload.removeFile(file)
-        // console.log(this.files);
-
-      },
-      // 上传成功
-      BtnSuccess(file) {
-        console.log(file)
-      },
-      // 上传失败
-      errHandler(file) {
-        console.log(file)
-        this.releaseContent.unshift({url: file.url})
-        // const msg = file.response.message
-        this.$createToast({
-          type: 'warn',
-          txt: '牛逼了,上传成功',
-          time: 1000
-        }).show()
-      }
+      // addedHandler() {
+      //   // const file = this.files[0]
+      //   // file && this.$refs.upload.removeFile(file)
+      //   // console.log(this.files);
+      //
+      // },
+      // // 上传成功
+      // BtnSuccess(file) {
+      //   console.log(file)
+      // },
+      // // 上传失败
+      // errHandler(file) {
+      //   console.log(file)
+      //   this.releaseContent.unshift({url: file.url})
+      //   // const msg = file.response.message
+      //   this.$createToast({
+      //     type: 'warn',
+      //     txt: '牛逼了,上传成功',
+      //     time: 1000
+      //   }).show()
+      // }
     }
   }
 </script>

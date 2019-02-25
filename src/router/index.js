@@ -39,18 +39,36 @@ export default new Router({
               path: '/index/good/home',
               name: 'ContentgoodthingreCommend',
               component: () => import('@/components/goodthing/home/home.vue'),
+              meta: {
+                back: false,
+                searchs: true,
+                title: false,
+                news: true
+              }
             },
             // 好物-列表页
             {
               path: '/index/good/list',
               name: 'ContentgoodthingreList',
               component: () => import('@/components/goodthing/list/list.vue'),
+              meta: {
+                back: false,
+                searchs: false,
+                title: '',
+                news: true
+              }
             },
             // 消息
             {
               path: '/index/good/news',
               name: 'ContentgoodthingreNews',
               component: () => import('@/components/goodthing/news/news.vue'),
+              meta: {
+                back: true,
+                searchs: true,
+                title: true,
+                news: true
+              }
             }
           ]
         },
@@ -98,7 +116,11 @@ export default new Router({
         {
           path: '/personal/activity',
           name: 'PersonalActivity',
-          component: () => import('@/components/personal/activity/activity.vue')
+          component: () => import('@/components/personal/activity/activity.vue'),
+          meta: {
+            type: 1,
+            name: '我的活动'
+          }
         },
         // 浏览历史
         {
