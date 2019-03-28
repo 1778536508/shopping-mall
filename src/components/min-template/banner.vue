@@ -18,19 +18,19 @@
         items: [
           {
             url: 'javascript:;',
-            image: '../../../static/imgaes/Carousel.png'
+            image: require('@/../static/imgaes/Carousel.png')
           },
           {
             url: 'javascript:;',
-            image: '../../../static/imgaes/Carousel.png'
+            image: require('@/../static/imgaes/Carousel.png')
           },
           {
             url: 'javascript:;',
-            image: '../../../static/imgaes/Carousel.png'
+            image: require('@/../static/imgaes/Carousel.png')
           },
           {
             url: 'javascript:;',
-            image: '../../../static/imgaes/Carousel.png'
+            image: require('@/../static/imgaes/Carousel.png')
           }
         ]
       }

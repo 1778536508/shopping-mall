@@ -78,7 +78,6 @@
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less">
-   @import "../../assets/less/layout/footer";
+   @import "../../assets/less/layout/footer.less";
 </style>
